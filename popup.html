@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<head>
+    <title>GESCORP - Ordenação de Chamadas</title>
+    <script src="popup.js"></script>
+    <style>
+        body {
+            width: 250px;
+            height: 160px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px;
+            display: flex;
+            /* Use flexbox */
+            flex-direction: column;
+            /* Arrange items vertically */
+            align-items: flex-start;
+            /* Align items to the start */
+        }
+
+        h1 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .btn {
+            border: none;
+            /* Remove borders */
+            color: white;
+            /* Add a text color */
+            padding: 14px 28px;
+            /* Add some padding */
+            cursor: pointer;
+            /* Add a pointer cursor on mouse-over */
+        }
+
+        .info {
+            background-color: #2196F3;
+        }
+
+        /* Blue */
+        .info:hover {
+            background: #0b7dda;
+        }
+
+        /* The switch - the box around the slider */
+        .switch {
+            display: flex;
+            /* Use flexbox */
+            align-items: center;
+            /* Align items vertically */
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: relative;
+            cursor: pointer;
+            width: 60px;
+            height: 34px;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .switch-label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GESCORP - Ordenação de Listagem de Chamadas</h1>
+    <p>Clica no botão para ordenar as chamadas</p>
+    <div class="flex-container">
+        <button id="button" class="btn info">Ordenar</button>
+        <label class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider round"></span>
+        </label>
+        <span class="switch-label" id="switch-label">ASC</span>
+    </div>
+</body>
+
+</html>
