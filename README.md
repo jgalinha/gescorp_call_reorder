@@ -1,2 +1,2 @@
-# gescorp_call_reorder
-GESCORP Call Reorder Chrome Extension
+# GESCORP CALL Reorder
+Chrome Extension to reorder history call
